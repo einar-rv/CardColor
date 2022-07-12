@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body{
+    background: #e0e0e0;
+    font-family: 'Comfortaa';
+    -webkit-transition: .4s ease all;
+            transition: .4s ease all;
+}
+
+a{
+    color: rgb(26, 26, 26);
+    text-decoration: none;
+    font-weight: 500;
+}
+/*Puse al la tarjeta en una sección para poder centrarla, fue lo que se me ocurrio de primeras*/
+.theCard{
+    margin: 120px 550px;
+}
+
+.container{
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    position: relative;
+    width: 255px;
+    height: 355px;
+    border-radius: 1em;
+    background: linear-gradient(50deg, #5da04c, #3e69ae);
+    overflow: hidden;
+    margin: 40px 20px;
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 35px;
+    top: 0;
+    right: 35px;
+    -webkit-transition: 1.9s;
+            transition: 1.9s;
+    background: linear-gradient(50deg, #00ff62, #00e1ff);
+    -webkit-transform: rotate(-45deg) translate(-50px, -100px);
+            transform: rotate(-45deg) translate(-50px, -100px);
+}
+
+.card{
+    display: -ms-grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: grid;
+    place-items: center;
+    /*Altura de nuestra card*/
+    width: 247px;
+    height: 347px;
+    background: #FEFEFE;
+    -webkit-box-shadow: 20px 20px 30px #bebebe, -20px -20px -30px #e0e0e0;
+            box-shadow: 20px 20px 30px #bebebe, -20px -20px -30px #e0e0e0;
+    border-radius: .8em;
+    z-index: 1;
+    color: gray;
+    overflow: hidden;
+    padding: 1em;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: .5s ease;
+            transition: .5s ease;
+}
+
+.card:hover{
+    color: black;
+}
+
+.container:hover::before{
+    -webkit-animation: effect 1.9s;
+            animation: effect 1.9s;
+}
+
+@keyframes effect{
+    100%{
+        -webkit-transform: rotate(-45deg) translate(0, 450px);
+                transform: rotate(-45deg) translate(0, 450px);
+    }
+}
+@-webkit-keyframes effect{
+    100%{
+        -webkit-transform: rotate(-45deg) translate(0, 450px);
+                transform: rotate(-45deg) translate(0, 450px);
+    }
+}
